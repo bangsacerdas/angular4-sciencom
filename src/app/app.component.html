@@ -1,0 +1,31 @@
+
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/">User</a></li>
+            <li><a routerLink="about">About</a></li>
+            <li><a routerLink="student">Student</a></li>
+          </ul>
+        </div>
+</nav>
+<!-- main app container -->
+<div class="jumbotron">
+        <div class="container">
+            <div class="col-sm-8 col-sm-offset-2">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+    
+    <!-- credits -->
+    <div class="text-center">
+        <p>
+            <a href="#" target="_top">Angular 2 bangsacerdas</a>
+        </p>
+        <p>
+            <a href="#" target="_top">bangsacerdas.com</a>
+        </p>
+    </div>

@@ -1,0 +1,11 @@
+<p>
+  student works!
+</p>
+
+<button (click)="getAllStudent()">Get All</button>
+<div *ngFor="let student of student">
+  {{student.id}}  {{student.name}}   
+</div>
+
+<button (click)="saveStudent()">Save Student</button>
+

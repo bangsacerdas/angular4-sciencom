@@ -1,0 +1,50 @@
+<h1>
+  Hello ini adalah page user
+  {{name1}}
+</h1>
+<p>
+  Alamat
+  Kelurahan :  {{alamat.kelurahan}} <br/>
+  Kecamatan :   {{alamat.kecamatan}} <br/>
+  Zip :   {{alamat.zip}} <br/>
+</p>
+<form>
+  <label for="name">Name</label><br/>
+  <input type="text" [(ngModel)]="name1" name="name1"/><br/>
+  <label for="keluaran">Name</label><br/>
+  <input type="text" [(ngModel)]="alamat.kelurahan" name="alamat.kelurahan"/><br/>
+  <label for="keluaran">Name</label><br/>
+  <input type="text" [(ngModel)]="alamat.kecamatan" name="alamat.kecamatan"/><br/>
+  <label for="zip">Name</label><br/>
+  <input type="text" [(ngModel)]="alamat.zip" name="alamat.zip"/><br/>
+</form>
+<hr/>
+
+<button (click)="clickSaya()" >Click Saya</button>
+<P [hidden]="nilai">Ini adalah p Hidden</P>
+<hr/>
+<form (submit)="addStudent(x.value)">
+    <input type="text" #x>
+    <button>Klik saya</button>
+</form>
+
+<h1> Student</h1>
+<ul>
+  <li *ngFor="let murid of student">
+  {{murid}} <button (click)="deleteStudent(murid)">x</button>
+  </li>
+</ul>
+
+<h1>My Array</h1>
+<ul style="list-style-type: none">
+  <li *ngFor="let arrayku of myArray; let i=index">
+      {{i+1}} nama :  {{arrayku.nama}}   Umur : {{arrayku.umur}}
+  </li>
+</ul>
+
+<h1>My Post</h1>
+<div *ngFor="let post of posts">
+  <h4>{{post.title}}</h4>
+  <p>{{post.body}}</p>
+  <br/>
+</div>
